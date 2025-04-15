@@ -1,0 +1,7 @@
+C:\Users\Kuba\Desktop\Inzynierka\authentication\src\main\java\org\inzynierka\authentication\AuthenticationApplication.java
+C:\Users\Kuba\Desktop\Inzynierka\authentication\src\main\java\org\inzynierka\authentication\Config\SecurityConfig.java
+C:\Users\Kuba\Desktop\Inzynierka\authentication\src\main\java\org\inzynierka\authentication\Repository\UserRepository.java
+C:\Users\Kuba\Desktop\Inzynierka\authentication\src\main\java\org\inzynierka\authentication\Controller\AuthController.java
+C:\Users\Kuba\Desktop\Inzynierka\authentication\src\main\java\org\inzynierka\authentication\Model\User.java
+C:\Users\Kuba\Desktop\Inzynierka\authentication\src\main\java\org\inzynierka\authentication\Service\CustomUserDetailsService.java
+C:\Users\Kuba\Desktop\Inzynierka\authentication\src\main\java\org\inzynierka\authentication\Component\JwtUtil.java

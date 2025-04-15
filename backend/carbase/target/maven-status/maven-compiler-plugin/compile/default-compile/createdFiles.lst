@@ -1,0 +1,6 @@
+org\inzynierka\carbase\Model\Car.class
+org\inzynierka\carbase\Configuration\WebConfig.class
+org\inzynierka\carbase\Service\CarService.class
+org\inzynierka\carbase\CarbaseApplication.class
+org\inzynierka\carbase\Repository\CarRepository.class
+org\inzynierka\carbase\Controller\CarController.class
