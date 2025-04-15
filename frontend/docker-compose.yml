@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: .  # Kropka oznacza bieżący folder, czyli 'frontend'
+    ports:
+      - "8085:80"  # Mapowanie portów, 8085 na lokalnym systemie -> port 80 w kontenerze
+    volumes:
+      - .:/usr/share/nginx/html:ro  # Montowanie zawartości folderu 'frontend' do Nginx
+    restart: always
