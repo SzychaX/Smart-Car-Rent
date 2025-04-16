@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Inz</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Footer-Basic-icons.css">
+    <link rel="stylesheet" href="assets/css/Google-Style-Login-.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="assets/css/Sign-Up-Form---Gabriela-Carvalho.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+<div id="hero-top">
+    <nav class="navbar navbar-expand-md bg-body" style="box-shadow: 0px 0px 10px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="background: url(&quot;assets/img/logo.png&quot;) center / cover no-repeat;width: 75px;height: 50px;"></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+</div>
+
+<!-- Formularz rejestracji -->
+<form id="registerForm">
+    <div class="gc004-container">
+        <h1 class="text-center" style="font-family: Montserrat, sans-serif;font-weight: bold;">Sign Up</h1>
+        <p style="font-family: Montserrat, sans-serif;letter-spacing: 1px;">Please fill in this form to create an account.</p>
+        <label class="form-label fw-bold" for="name" style="font-family: Montserrat, sans-serif;">Name*</label>
+        <input type="text" placeholder="Enter Name" name="name" required="">
+        <label class="form-label fw-bold" for="surname" style="font-family: Montserrat, sans-serif;">Surname*</label>
+        <input type="text" placeholder="Enter Surname" name="surname" required="">
+        <label class="form-label fw-bold" for="phone" style="font-family: Montserrat, sans-serif;">Phone Number*</label>
+        <input type="text" placeholder="Enter Phone Number" name="phone" required="">
+        <label class="form-label fw-bold" for="email" style="font-family: Montserrat, sans-serif;">Email*</label>
+        <input type="text" placeholder="Enter Email - it will be your nickname" name="email" required="">
+        <label class="form-label fw-bold" for="psw" style="font-family: Montserrat, sans-serif;">Password*</label>
+        <input type="password" placeholder="Enter Password" name="psw" required="">
+        <label class="form-label fw-bold" for="psw-repeat" style="font-family: Montserrat, sans-serif;">Repeat Password*</label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required="">
+        <p style="font-style: italic;">By creating an account you agree to our&nbsp;<a class="gc004-dodgerblue" href="#">Terms &amp; Privacy</a>.</p>
+        <hr>
+        <div class="gc-clearfix" style="margin-right: 5px;margin-left: 5px;display: flex;">
+            <!-- Dodany onclick do przekierowania na index.html -->
+            <button class="gc-cancelbtn" type="button" onclick="window.location.href='index.html'" style="border-radius: 4px;width: 200px;margin-right: 5px;margin-left: 5px;background: rgb(127,148,157);font-family: Montserrat, sans-serif;">Cancel</button>
+            <button class="ms-auto" id="sign-up" type="submit" style="border-radius: 4px;width: 200px;margin-right: 5px;margin-left: 5px;background: rgb(17,154,88);font-family: Montserrat, sans-serif;font-weight: bold;">Sign Up</button>
+        </div>
+    </div>
+</form>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+<script>
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Pobieranie danych z formularza
+        const name = this.name.value;
+        const surname = this.surname.value;
+        const phone = this.phone.value;
+        const email = this.email.value;
+        const password = this.psw.value;
+        const repeatPassword = this["psw-repeat"].value;
+
+        // Prosta walidacja hasła
+        if (password !== repeatPassword) {
+            alert("Passwords do not match.");
+            return;
+        }
+
+        // Przygotowanie danych JSON.
+        // Jeśli w modelu mamy jedno pole "name", można scalić imię i nazwisko.
+        const requestData = {
+            name: name + ' ' + surname,
+            email: email,
+            password: password,
+            phoneNumber: phone
+        };
+
+        // Wysyłamy dane do endpointu rejestracji
+        fetch('http://localhost:8081/api/auth/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestData)
+        }).then(response => {
+            if (response.ok) {
+                // Rejestracja udana, przekierowanie do strony logowania
+                window.location.href = "login.html";
+            } else {
+                response.json().then(data => {
+                    alert("Registration failed: " + (data.message || "Unknown error"));
+                });
+            }
+        }).catch(error => {
+            alert("Error occurred: " + error.message);
+        });
+    });
+</script>
+</body>
+
+</html>

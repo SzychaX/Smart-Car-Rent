@@ -1,81 +1,83 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Login</title>
-  <link rel="stylesheet" href="login/assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
-  <link rel="stylesheet" href="login/assets/css/Login-Form-Basic-icons.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Inz - Login</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Footer-Basic-icons.css">
+    <link rel="stylesheet" href="assets/css/Google-Style-Login-.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="assets/css/Sign-Up-Form---Gabriela-Carvalho.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body style="background: linear-gradient(-88deg, #16196c, rgb(159,183,230) 85%, #c8cddd), radial-gradient(#6d46dd, #b896d9), var(--bs-gray); box-shadow: 0px 0px 20px 20px;">
-  <section class="position-relative py-4 py-xl-5">
-    <div class="container">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-6 col-xl-4" style="width: 600px; height: 600px; margin-top: 80px;">
-          <div class="card mb-5">
-            <div class="card-body d-flex flex-column align-items-center">
-              <h2 style="font-family: Montserrat, sans-serif; font-weight: bold; text-align: center; font-size: 35px; letter-spacing: 1px;">Member Login</h2>
-              <div class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4" style="background: rgb(13,110,253);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person">
-                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"></path>
-                </svg>
-              </div>
-              <form class="text-center" method="post">
-                <div class="mb-3">
-                  <input class="form-control" type="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="mb-3">
-                  <input class="form-control" type="password" name="password" placeholder="Password" required>
-                </div>
-                <div class="mb-3">
-                  <button class="btn btn-primary d-block w-100" type="submit">Login</button>
-                </div>
-                <p class="text-muted">Forgot your password?</p>
-              </form>
-              <!-- Miejsce na komunikat błędu -->
-              <p id="error-msg" style="color: red; display: none;">Nieprawidłowy email lub hasło.</p>
-            </div>
-          </div>
+
+<body style="border-width: 4px;border-color: rgb(189,189,189);">
+<div id="hero-top">
+    <nav class="navbar navbar-expand-md bg-body" style="box-shadow: 0px 0px 10px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="background: url('assets/img/logo.png') center / cover no-repeat;width: 75px;height: 50px;"></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <script src="login/assets/bootstrap/js/bootstrap.min.js"></script>
-  <script>
+    </nav>
+</div>
+
+<div class="login-card">
+    <img class="profile-img-card" src="assets/img/avatar_2x.png">
+    <p class="profile-name-card"> </p>
+    <form class="form-signin">
+        <span class="reauth-email"> </span>
+        <input class="form-control" type="email" id="inputEmail" name="email" required placeholder="Email" autofocus style="background: rgb(241,241,241);">
+        <input class="form-control" type="password" id="inputPassword" name="password" required placeholder="Password" style="background: rgb(241,241,241);">
+        <div class="checkbox"></div>
+        <button class="btn btn-primary btn-lg d-block btn-signin w-100" type="submit" style="font-family: Montserrat, sans-serif;background: rgb(17,154,88);">Sign in</button>
+    </form>
+    <div id="error-msg" style="color: red; display: none; margin-top: 10px;">Nieprawidłowy email lub hasło.</div>
+    <a class="forgot-password" href="#">Forgot your password?</a>
+    <p style="color: rgb(81,111,150);font-family: Montserrat, sans-serif;line-height: 30px;">Not yet a member? Click here</p>
+    <button class="btn btn-primary btn-lg d-block btn-signin w-100" type="button" onclick="window.location.href='register.html'" style="font-family: Montserrat, sans-serif;background: rgb(127,148,157);">Register now!</button>
+</div>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+<script>
     document.querySelector('form').addEventListener('submit', function(e) {
-      e.preventDefault(); // zatrzymujemy domyślne wysyłanie formularza
+        e.preventDefault(); // zatrzymujemy domyślne wysyłanie formularza
 
-      const email = document.querySelector('input[name="email"]').value;
-      const password = document.querySelector('input[name="password"]').value;
-      const loginData = { email, password };
+        const email = document.querySelector('input[name="email"]').value;
+        const password = document.querySelector('input[name="password"]').value;
+        const loginData = { email, password };
 
-      // Wysyłka danych do backendu (zmień adres endpointu, jeśli potrzeba)
-      fetch('http://localhost:8081/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(loginData)
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Błąd logowania');
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Zalogowano, odebrano:', data);
-        // Zapisujemy token (lub całą odpowiedź) w localStorage
-        localStorage.setItem("authToken", data.token);
-        localStorage.setItem("email", data.user.email)
-        // Przekierowanie na stronę główną (np. home.html)
-        window.location.href = "index.html";
-      })
-      .catch(error => {
-        console.error('Błąd:', error);
-        document.getElementById("error-msg").style.display = "block";
-      });
+        fetch('http://localhost:8081/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(loginData)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Błąd logowania');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Zalogowano, odebrano:', data);
+                localStorage.setItem("authToken", data.token);
+                localStorage.setItem("email", data.user.email);
+                window.location.href = "index.html"; // przekierowanie po zalogowaniu
+            })
+            .catch(error => {
+                console.error('Błąd:', error);
+                document.getElementById("error-msg").style.display = "block";
+            });
     });
-  </script>
+</script>
 </body>
+
 </html>
