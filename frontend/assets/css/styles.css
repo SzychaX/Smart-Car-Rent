@@ -96,3 +96,119 @@
   margin-top: -180px;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  overflow-x: hidden;
+}
+
+.card-bodyhover {
+}
+
+.card {
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (min-width: 600px) {
+  #short-stats {
+    width: 150px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+}
+
+#short-stats {
+  width: 85%;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+#cell-left {
+  text-align: left;
+  font-weight: bold;
+}
+
+#cell-right {
+  text-align: right;
+}
+
+.cell-left {
+  text-align: left;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.cell-right {
+  text-align: right;
+  padding-right: 0px;
+}
+
+.car-img-fixed {
+}
+
+.card-img-fit {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card-fix {
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .img-cover {
+    height: 250px;
+  }
+}
+
+.img-cover {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.offer-img {
+  object-fit: cover;
+}
+
+offer-img-wrapper {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer-img-wrap {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

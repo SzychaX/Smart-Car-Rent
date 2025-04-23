@@ -4,4 +4,6 @@ org\inzynierka\authentication\Service\CustomUserDetailsService.class
 org\inzynierka\authentication\Config\SecurityConfig.class
 org\inzynierka\authentication\AuthenticationApplication.class
 org\inzynierka\authentication\Component\JwtUtil.class
+org\inzynierka\authentication\Config\WebConfig$1.class
 org\inzynierka\authentication\Model\User.class
+org\inzynierka\authentication\Config\WebConfig.class
