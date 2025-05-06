@@ -18,7 +18,7 @@
     <div id="hero-top">
       <nav class="navbar navbar-expand-md bg-body">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="background: url('assets/img/logo.png') center / cover no-repeat; width: 75px; height: 50px;"></a>
+          <a class="navbar-brand" href="index.html" style="background: url('assets/img/logo.png') center / cover no-repeat; width: 75px; height: 50px;"></a>
           <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
             <span class="visually-hidden">Toggle navigation</span>
             <span class="navbar-toggler-icon"></span>
@@ -26,8 +26,8 @@
           <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="navbar-nav me-auto" style="font-family: 'Montserrat'; font-size: 13px;">
               <li class="nav-item"><a class="nav-link active" href="offert.html" style="font-weight: bold;">CARS</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">ABOUT US</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+              <li class="nav-item"><a class="nav-link" href="about-us.html">ABOUT US</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
             </ul>
             <ul class="navbar-nav ms-auto" style="font-family: Montserrat, sans-serif;">
               <!-- Link do logowania/wylogowania z miejscem na email -->
@@ -156,7 +156,7 @@
       const token = localStorage.getItem("authToken");
       if (token) {
         authLink.textContent = "SIGN OUT";
-        authLink.href = "#";
+        authLink.href = "index.html";
         // Dodaj email użytkownika obok przycisku, jeśli zapisany
         const userEmail = localStorage.getItem("email");
         if (userEmail) {

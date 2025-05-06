@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Inz</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Footer-Basic-icons.css">
+    <link rel="stylesheet" href="assets/css/Google-Style-Login-.css">
+    <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="assets/css/Shop-item-styles.css">
+    <link rel="stylesheet" href="assets/css/Shop-item.css">
+    <link rel="stylesheet" href="assets/css/Sign-Up-Form---Gabriela-Carvalho.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div id="hero-top">
+        <nav class="navbar navbar-expand-md bg-body" style="box-shadow: 0px 0px 10px;">
+            <div class="container-fluid"><a class="navbar-brand" href="index.html" style="background: url(&quot;assets/img/logo.png&quot;) center / cover no-repeat;width: 75px;height: 50px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="navbar-nav me-auto" style="font-family: 'Montserrat';font-size: 13PX;">
+                        <li class="nav-item"><a class="nav-link active" href="offert.html">CARS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about-us.html">ABOUT US</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto" style="font-family: Montserrat, sans-serif;">
+                        <li class="nav-item"><a class="nav-link" href="login.html" style="font-weight: bold;font-size: 13PX;">SIGN IN</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <h2 class="text-center">Moja rezerwacja</h2><div class="container my-4">
+
+  <!-- Style dla efektu hover -->
+  <style>
+    .btn-danger-hover:hover {
+      background-color: #dc3545;
+      color: white;
+      border-color: #dc3545;
+    }
+    .btn-link {
+      color: #6c757d; /* Szary kolor dla linków */
+    }
+    .btn-link:hover {
+      color: #495057; /* Ciemniejszy szary dla hover */
+      text-decoration: none; /* Usunięcie podkreślenia */
+    }
+  </style>
+
+  <!-- Krok 1: Odbiór i Zwrot -->
+  <div class="card shadow-sm rounded-3 mb-3" id="pickup-return-card">
+    <div class="card-body">
+      <div class="row align-items-start"> <!-- align-items-start zamiast align-items-center -->
+        
+        <!-- Odbiór (lewa strona) -->
+        <div class="col-md-6">
+          <p class="mb-1">
+            <i class="bi bi-geo-alt-fill text-danger" style="font-size: 24px;"></i> 
+            <strong>Odbiór</strong>
+          </p>
+          <div id="pickup-location">
+            Warszawa<br>
+            Przyklad 1<br>
+            <strong id="pickup-date">30.04.2025, 18:30</strong>
+          </div>
+          <!-- Edytowanie lokalizacji i daty/godziny -->
+          <button class="btn btn-link btn-sm" onclick="editPickupLocation()">Edytuj lokalizację</button>
+          <button class="btn btn-link btn-sm ms-2" onclick="editPickupDate()">Edytuj datę i godzinę</button>
+        </div>
+
+        <!-- Zwrot (prawa strona) -->
+        <div class="col-md-6 border-start ps-3"> <!-- border-start dodana, aby była linia oddzielająca -->
+          <p class="mb-1">
+            <i class="bi bi-geo-alt-fill text-danger" style="font-size: 24px;"></i> 
+            <strong>Zwrot</strong>
+          </p>
+          <div id="return-location">
+            Berlin<br>
+            Przyklad 2<br>
+            <strong id="return-date">30.10.2025, 18:30</strong>
+          </div>
+          <!-- Edytowanie lokalizacji i daty/godziny -->
+          <button class="btn btn-link btn-sm" onclick="editReturnLocation()">Edytuj lokalizację</button>
+          <button class="btn btn-link btn-sm ms-2" onclick="editReturnDate()">Edytuj datę i godzinę</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Krok 2: Samochód -->
+  <div class="card shadow-sm rounded-3 mb-3" id="car-card">
+    <div class="card-body">
+      <div class="row align-items-center">
+
+        <div class="col-md-2">
+          <img src="assets/img/ford_fiesta.png" class="img-fluid rounded" alt="Samochód" style="max-width: 120px;">
+        </div>
+
+        <div class="col-md-4 ms-3">
+          <h5 class="mb-1" id="car-name">Ford Fiesta</h5>
+          <p class="mb-1" style="font-size: 14px;" id="car-description">Ford Fiesta 2016 to zwinny i ekonomiczny samochód miejski...</p>
+        </div>
+
+        <div class="col-md-2 text-success fw-bold">
+          Wynajem<br><span id="car-price">+10000 PLN</span>
+        </div>
+
+        <div class="col-md-4 d-flex justify-content-end">
+          <button class="btn btn-secondary btn-sm btn-danger-hover" onclick="removeCar()" style="width: 48px;">
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Funkcja do edytowania lokalizacji odbioru
+  function editPickupLocation() {
+    const newLocation = prompt("Podaj nową lokalizację odbioru:");
+    if (newLocation) {
+      document.getElementById("pickup-location").innerHTML = `${newLocation}<br>Przyklad 1<br><strong id="pickup-date">${document.getElementById('pickup-date').textContent}</strong>`;
+    }
+  }
+
+  // Funkcja do edytowania daty i godziny odbioru
+  function editPickupDate() {
+    const newDate = prompt("Podaj nową datę i godzinę odbioru (np. 01.05.2025, 10:00):");
+    if (newDate) {
+      document.getElementById("pickup-date").textContent = newDate;
+    }
+  }
+
+  // Funkcja do edytowania lokalizacji zwrotu
+  function editReturnLocation() {
+    const newLocation = prompt("Podaj nową lokalizację zwrotu:");
+    if (newLocation) {
+      document.getElementById("return-location").innerHTML = `${newLocation}<br>Przyklad 2<br><strong id="return-date">${document.getElementById('return-date').textContent}</strong>`;
+    }
+  }
+
+  // Funkcja do edytowania daty i godziny zwrotu
+  function editReturnDate() {
+    const newDate = prompt("Podaj nową datę i godzinę zwrotu (np. 01.11.2025, 15:00):");
+    if (newDate) {
+      document.getElementById("return-date").textContent = newDate;
+    }
+  }
+
+  // Funkcja do usuwania samochodu
+  function removeCar() {
+    const carCard = document.getElementById("car-card");
+    carCard.parentElement.removeChild(carCard);
+  }
+</script>
+
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/DateRangePicker-My-Date-Picker.js"></script>
+    <script src="assets/js/GoToOffert.js"></script>
+    <script src="assets/js/GoToOneCar.js"></script>
+    <script src="assets/js/GoToReservation.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+</body>
+
+</html>
