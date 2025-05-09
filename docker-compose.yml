@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   postgres:
     image: postgres:latest
@@ -23,7 +25,7 @@ services:
 
   carbase-app:
     build: ./backend/carbase
-    container_name: carbase-app
+    container_name: carbase-app-inz
     depends_on:
       - postgres
       - eureka-server
@@ -31,12 +33,10 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/car_rental
       SPRING_DATASOURCE_USERNAME: user
       SPRING_DATASOURCE_PASSWORD: password
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://eureka-server:8761/eureka/
-      EUREKA_CLIENT_REGISTER_WITH_EUREKA: "true"
-      EUREKA_CLIENT_FETCH_REGISTRY: "true"
+      SPRING_JPA_HIBERNATE_DDL-AUTO: update
+    command: [ "sh", "-c", "until nc -z -v -w30 postgres 5432; do echo 'Waiting for postgres'; sleep 5; done; java -jar /app/app.jar" ]
     ports:
-      - "8080:8080"
+      - "8082:8082"
     networks:
       - inzynierka
 
@@ -45,15 +45,21 @@ services:
     container_name: authentication-app
     depends_on:
       - postgres
+      - eureka-server
     ports:
       - "8081:8081"
     environment:
+      SPRING_APPLICATION_NAME: authentication
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/car_rental
       SPRING_DATASOURCE_USERNAME: user
       SPRING_DATASOURCE_PASSWORD: password
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_SHOW_SQL: "true"
       SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.PostgreSQLDialect
+      SPRING_CLOUD_DISCOVERY_ENABLED: "true"
+      SPRING_CLOUD_EUREKA_CLIENT_REGISTER_WITH_EUREKA: "true"
+      SPRING_CLOUD_EUREKA_CLIENT_FETCH_REGISTRY: "true"
+      SPRING_CLOUD_EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
       SERVER_PORT: 8081
     networks:
       - inzynierka
