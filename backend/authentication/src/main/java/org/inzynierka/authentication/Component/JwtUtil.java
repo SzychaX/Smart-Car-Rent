@@ -16,7 +16,6 @@ public class JwtUtil {
     private static final long EXPIRATION_TIME = 1000 * 60 * 60 * 10; // 10h
 
     public JwtUtil() {
-        // Klucz musi mieć co najmniej 32 znaki (256 bitów)
         String SECRET_STRING = "ToJestBardzoDlugiTajnyKluczCoMa32Znaki1234567890";
         this.key = Keys.hmacShaKeyFor(SECRET_STRING.getBytes(StandardCharsets.UTF_8));
     }

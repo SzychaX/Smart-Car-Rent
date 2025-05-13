@@ -28,8 +28,8 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav me-auto" style="font-family: 'Montserrat';font-size: 13PX;">
                     <li class="nav-item"><a class="nav-link active" href="offert.html" style="font-weight: bold;">CARS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">ABOUT US</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
                 </ul>
                 <ul class="navbar-nav ms-auto" style="font-family: Montserrat, sans-serif;">
                     <li class="nav-item"><a id="auth-link" class="nav-link" href="login.html" style="font-weight: bold;font-size: 13PX;">SIGN IN</a></li>
@@ -123,7 +123,7 @@
         }
 
         // Pobierz wszystkie auta z API
-        fetch("http://localhost:8080/api/cars")
+        fetch("http://localhost:8082/api/cars")
             .then(res => res.json())
             .then(data => {
                 cars = data;
@@ -153,7 +153,7 @@
         const token = localStorage.getItem("authToken");
         if (token) {
             authLink.textContent = "SIGN OUT";
-            authLink.href = "#";
+            authLink.href = "index.html";
             // Dodaj email użytkownika obok przycisku, jeśli zapisany
             const userEmail = localStorage.getItem("email");
             if (userEmail) {
