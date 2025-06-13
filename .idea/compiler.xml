@@ -20,10 +20,10 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="cars" />
-        <module name="carbase" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="carbase" target="17" />
       <module name="carsbase" target="17" />
     </bytecodeTargetLevel>
   </component>

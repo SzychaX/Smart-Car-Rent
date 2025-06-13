@@ -1,164 +1,107 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
-
+<html lang="pl">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Inz</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/Footer-Basic-icons.css">
-    <link rel="stylesheet" href="assets/css/Google-Style-Login-.css">
-    <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
-    <link rel="stylesheet" href="assets/css/Shop-item-styles.css">
-    <link rel="stylesheet" href="assets/css/Shop-item.css">
-    <link rel="stylesheet" href="assets/css/Sign-Up-Form---Gabriela-Carvalho.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Szczegóły samochodu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
-
 <body>
-    <div id="hero-top">
-        <nav class="navbar navbar-expand-md bg-body" style="box-shadow: 0px 0px 10px;">
-            <div class="container-fluid"><a class="navbar-brand" href="index.html" style="background: url(&quot;assets/img/logo.png&quot;) center / cover no-repeat;width: 75px;height: 50px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="navbar-nav me-auto" style="font-family: 'Montserrat';font-size: 13PX;">
-                        <li class="nav-item"><a class="nav-link active" href="offert.html" style="font-weight: bold;">CARS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about-us.html">ABOUT US</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto" style="font-family: Montserrat, sans-serif;">
-                        <li class="nav-item"><a class="nav-link" href="login.html" style="font-weight: bold;font-size: 13PX;">SIGN IN</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <div class="container">
-        <h1 style="font-family: Montserrat, sans-serif;margin-bottom: 3px;text-align: center;font-weight: bold;">Ford</h1>
-        <p style="font-size: 30px;color: rgb(107,112,118);font-family: Montserrat, sans-serif;text-align: center;">Fiesta</p>
-        <div class="row">
-            <div class="col-md-8"><img class="img-fluid" src="assets/img/ford_fiesta.png" alt="image"></div>
-            <div class="col-md-4">
-                <p style="font-family: Montserrat, sans-serif;">Ford Fiesta 2016 to zwinny i ekonomiczny samochód miejski, idealny do poruszania się po mieście i na krótkie wyjazdy. Oferuje komfortowe wnętrze, nowoczesne wyposażenie oraz niskie zużycie paliwa. Świetnie sprawdzi się zarówno dla singli, jak i par szukających niezawodnego auta na co dzień.<br><br></p>
-                <h3 class="my-3" style="font-family: Montserrat, sans-serif;font-weight: bold;">Dane techniczne</h3>
-                <div id="short-stats-7" class="tableshort">
-                    <table class="table">
-                        <thead>
-                            <tr></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="cell-left">Silnik</td>
-                                <td class="cell-right">Diesel</td>
-                            </tr>
-                            <tr>
-                                <td class="cell-left">Skrzynia biegów</td>
-                                <td class="cell-right">Manualna</td>
-                            </tr>
-                            <tr>
-                                <td class="cell-left">Liczba miejsc</td>
-                                <td class="cell-right">5</td>
-                            </tr>
-                            <tr>
-                                <td class="cell-left">Nadwozie</td>
-                                <td class="cell-right">Hatchback</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="price" class="tableshort">
-                    <table class="table">
-                        <thead>
-                            <tr></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="cell-left" style="font-size: 22px;">CENA ZA DOBĘ</td>
-                                <td id="cell-price" class="cell-right" style="font-size: 23px;word-break: keep-all;">65zł</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div><a id="zarezerwuj-1car"
-   href="#rezerwacjaModal"
-   class="btn btn-primary reserve-button"
-   role="button"
-   style="background: rgba(255,255,255,0); color: rgb(111,115,118); font-family: Montserrat, sans-serif; font-weight: bold; font-size: 20px; border-width: 3px; border-color: rgb(111,115,118); margin-top: 10px;"
-   data-bs-toggle="modal">
-   Rezerwuj
-</a>
+<div class="container mt-5">
+    <a href="offert.html" class="btn btn-secondary mb-3">Powrót do oferty</a>
+    <h1 id="brand" class="fw-bold text-center" style="color: #2c3e50;"></h1>
+    <p id="model" class="text-center" style="font-size: 18px; color: #34495e;"></p>
 
-            </div>
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6 text-center">
+            <img id="car-image" src="" alt="Zdjęcie samochodu" class="img-fluid rounded shadow" />
         </div>
-        <h3 class="my-4">Zobacz więcej zdjęć</h3>
-        <div class="row">
-            <div class="col-sm-6 col-md-3 mb-4">
-                <div class="offer-img-wrap"><a href="zoom-photos.html"><img class="object-fit-cover offer-img" src="assets/img/inside-fiesta.png"></a></div>
-            </div>
-            <div class="col-sm-6 col-md-3 mb-4">
-                <div class="offer-img-wrap"><a href="zoom-photos.html"><img class="object-fit-cover offer-img" src="assets/img/front-fiesta.png"></a></div>
-            </div>
-            <div class="col-sm-6 col-md-3 mb-4">
-                <div class="offer-img-wrap"><a href="zoom-photos.html"><img class="object-fit-cover offer-img" src="assets/img/inside-fiesta2.png"></a></div>
-            </div>
-            <div class="col-sm-6 col-md-3 mb-4">
-                <div class="offer-img-wrap"><a href="zoom-photos.html"><img class="object-fit-cover offer-img" src="assets/img/frontfiesta.jpg"></a></div>
-            </div>
+        <div class="col-md-6">
+            <h3 class="mb-3">Opis samochodu</h3>
+            <p id="description" style="font-size: 16px; color: #555;"></p>
+
+            <h4 class="mt-4">Cena wypożyczenia</h4>
+            <p id="cell-price" style="font-size: 22px; font-weight: 700; color: #e74c3c;"></p>
+
+            <h4 class="mt-4">Dane techniczne</h4>
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <td>Silnik</td>
+                    <td id="engine-type"></td>
+                </tr>
+                <tr>
+                    <td>Skrzynia biegów</td>
+                    <td id="transmission"></td>
+                </tr>
+                <tr>
+                    <td>Liczba miejsc</td>
+                    <td id="seats"></td>
+                </tr>
+                <tr>
+                    <td>Nadwozie</td>
+                    <td id="body-type"></td>
+                </tr>
+                <tr>
+                    <td>Moc (KM)</td>
+                    <td id="horsepower"></td>
+                </tr>
+                <tr>
+                    <td>Przebieg (km)</td>
+                    <td id="mileage"></td>
+                </tr>
+                <tr>
+                    <td>Rok produkcji</td>
+                    <td id="year"></td>
+                </tr>
+                <tr>
+                    <td>Kolor</td>
+                    <td id="color"></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="rezerwacjaModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" style="font-family: Montserrat, sans-serif;font-weight: bold;">Rezerwacja</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="d-flex flex-column" style="border-color: rgba(33,37,41,0);"><label class="form-label" id="msc-odb" style="font-family: Montserrat, sans-serif;">Miejsce odbioru<select class="form-select">
-                                <optgroup label="Wybierz lokalizację">
-                                    <option value="12">Warszawa</option>
-                                    <option value="13">Berlin</option>
-                                    <option value="14">Wilno</option>
-                                    <option value="">Praga</option>
-                                    <option value="">Bratysława</option>
-                                    <option value="">Kopenhaga</option>
-                                    <option value="">Sztokholm</option>
-                                </optgroup>
-                            </select></label><label class="form-label" id="data" style="font-family: Montserrat, sans-serif;">Data wypożyczenia<input class="form-control" id="dataOdbioru" type="date" placeholder="Wybierz datę"></label><label class="form-label" id="godz" style="font-family: Montserrat, sans-serif;">Godzina<input class="form-control" id="godzinaOdbioru" type="time"></label><label class="form-label" id="msc-zwr" style="font-family: Montserrat, sans-serif;">Miejsce zwrotu<select class="form-select">
-                                <optgroup label="Wybierz lokalizację">
-                                    <option value="12">Warszawa</option>
-                                    <option value="13">Berlin</option>
-                                    <option value="14">Wilno</option>
-                                    <option value="">Praga</option>
-                                    <option value="">Bratysława</option>
-                                    <option value="">Kopenhaga</option>
-                                    <option value="">Sztokholm</option>
-                                </optgroup>
-                            </select></label><label class="form-label" id="iloscDni" style="font-family: Montserrat, sans-serif;">Liczba dni<input class="form-control" type="number"></label></form>
-                </div>
-                <div class="modal-footer"><button class="btn btn-primary" id="go-to-reservation" type="button" style="font-family: Montserrat, sans-serif;font-weight: bold;background: rgb(75,160,89);border-color: rgb(75,160,89);">Przejdź dalej</button></div>
-            </div>
-        </div>
-    </div>
-    <footer class="text-center d-flex flex-column justify-content-center align-items-center" style="background: rgba(0,0,0,0);color: rgb(194,194,194);margin-top: 0;height: 200px;">
-        <div class="container text-muted py-4 py-lg-5">
-            <ul class="list-inline" style="font-size: 13px;color: rgb(255,255,255);">
-                <li class="list-inline-item me-4" style="margin-right: 0;"><a class="link-secondary" href="index.html" style="color: rgb(108, 117, 125);">Caroo&nbsp;</a></li>
-                <li class="list-inline-item me-4" style="margin-right: 0;"><a class="link-secondary" href="privacy.html">Privacy &amp; Legal&nbsp;</a></li>
-                <li class="list-inline-item"><a class="link-secondary" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/DateRangePicker-My-Date-Picker.js"></script>
-    <script src="assets/js/GoToOffert.js"></script>
-    <script src="assets/js/GoToOneCar.js"></script>
-    <script src="assets/js/GoToReservation.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const carId = urlParams.get("id");
+
+        if (!carId) {
+            alert("Brak id auta w URL");
+            return;
+        }
+
+        fetch(`http://localhost:8082/api/cars/${carId}`)
+            .then((response) => {
+                if (!response.ok) throw new Error("Nie znaleziono auta");
+                return response.json();
+            })
+            .then((car) => {
+                document.getElementById("brand").textContent = car.brand;
+                document.getElementById("model").textContent = car.model;
+                document.getElementById("description").textContent = car.description || "Brak opisu.";
+                document.getElementById("cell-price").textContent = car.rentalPrice + " zł";
+                document.getElementById("car-image").src = car.image || "assets/img/default-car.png";
+                document.getElementById("car-image").alt = `${car.brand} ${car.model}`;
+
+                document.getElementById("engine-type").textContent = car.engineType || car.engine || "-";
+                document.getElementById("transmission").textContent = car.transmission || "-";
+                document.getElementById("seats").textContent = car.seats || "-";
+                document.getElementById("body-type").textContent = car.bodyType || "-";
+                document.getElementById("horsepower").textContent = car.horsepower || "-";
+                document.getElementById("mileage").textContent = car.mileage || "-";
+                document.getElementById("year").textContent = car.year || "-";
+                document.getElementById("color").textContent = car.color || "-";
+            })
+            .catch((error) => {
+                console.error(error);
+                alert("Błąd ładowania danych auta");
+            });
+    });
+</script>
 </body>
-
 </html>

@@ -1,182 +1,118 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
-
+<html lang="pl">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Inz</title>
+    <meta charset="UTF-8">
+    <title>Oferta samochodu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/Footer-Basic-icons.css">
-    <link rel="stylesheet" href="assets/css/Google-Style-Login-.css">
-    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
-    <link rel="stylesheet" href="assets/css/Shop-item-styles.css">
-    <link rel="stylesheet" href="assets/css/Shop-item.css">
-    <link rel="stylesheet" href="assets/css/Sign-Up-Form---Gabriela-Carvalho.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .car-header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .car-img {
+            max-width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .car-details td {
+            padding: 8px;
+        }
+        .btn-back {
+            margin-top: 20px;
+        }
+    </style>
 </head>
-
-<body class="justify-content-center" style="border-radius: 10px;">
-<div id="hero-top">
-    <nav class="navbar navbar-expand-md bg-body" style="box-shadow: 0px 0px 10px;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/" style="background: url(&quot;assets/img/logo.png&quot;) center / cover no-repeat;width: 75px;height: 50px;"></a>
-            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
-                <span class="visually-hidden">Toggle navigation</span>
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav me-auto" style="font-family: 'Montserrat';font-size: 13PX;">
-                    <li class="nav-item"><a class="nav-link active" href="offert.html" style="font-weight: bold;">CARS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about-us.html">ABOUT US</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-                </ul>
-                <ul class="navbar-nav ms-auto" style="font-family: Montserrat, sans-serif;">
-                    <li class="nav-item"><a id="auth-link" class="nav-link" href="login.html" style="font-weight: bold;font-size: 13PX;">SIGN IN</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-
-<p style="font-family: Montserrat, sans-serif;font-weight: bold;text-align: center;margin-top: 10px;font-size: 20px;">
-    Samochody w naszej wypożyczalni
-</p>
-
+<body>
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-3 col-lg-2">
-            <button class="btn btn-primary filter-btn" data-filter="PERSONAL" type="button"
-                    style="background: rgb(96,96,96);border-color: rgb(96,96,96);">OSOBOWE</button>
+    <div class="car-header text-center">
+        <h1 id="car-title">Samochód</h1>
+        <p id="car-subtitle" class="text-muted"></p>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <img id="car-image" src="" alt="Zdjęcie samochodu" class="car-img w-100">
         </div>
-        <div class="col-md-3 col-lg-2">
-            <button class="btn btn-primary filter-btn" data-filter="BUS" type="button"
-                    style="background: rgb(96,96,96);border-color: rgb(96,96,96);">BUS</button>
-        </div>
-        <div class="col-md-3 col-lg-2">
-            <button class="btn btn-primary filter-btn" data-filter="AUTOMATIC" type="button"
-                    style="background: rgb(96,96,96);border-color: rgb(96,96,96);">AUTOMAT</button>
-        </div>
-        <div class="col-md-3 col-lg-2">
-            <button class="btn btn-primary filter-btn" data-filter="ELECTRIC" type="button"
-                    style="background: rgb(96,96,96);border-color: rgb(96,96,96);">ELEKTRYCZNE</button>
-        </div>
-        <div class="col-md-3 col-lg-2">
-            <button class="btn btn-primary filter-btn" data-filter="ALL" type="button"
-                    style="background: rgb(96,96,96);border-color: rgb(96,96,96);">WSZYSTKIE</button>
+        <div class="col-md-6">
+            <h4>Szczegóły pojazdu</h4>
+            <table class="table table-bordered car-details">
+                <tbody>
+                <tr>
+                    <td>Marka</td>
+                    <td id="car-brand"></td>
+                </tr>
+                <tr>
+                    <td>Model</td>
+                    <td id="car-model"></td>
+                </tr>
+                <tr>
+                    <td>Typ silnika</td>
+                    <td id="car-engine"></td>
+                </tr>
+                <tr>
+                    <td>Skrzynia biegów</td>
+                    <td id="car-transmission"></td>
+                </tr>
+                <tr>
+                    <td>Liczba miejsc</td>
+                    <td id="car-seats"></td>
+                </tr>
+                <tr>
+                    <td>Nadwozie</td>
+                    <td id="car-body"></td>
+                </tr>
+                </tbody>
+            </table>
+            <a href="offert.html" class="btn btn-secondary btn-back">← Powrót do oferty</a>
         </div>
     </div>
 </div>
 
-<div id="line"
-     style="color: rgb(112,112,112);background: #707070;border-width: 3px;margin-top: 5px;width: auto;height: 2px;margin-right: 40px;margin-left: 40px;">
-</div>
-
-<div class="container" style="padding-top: 4px;padding-bottom: 4px;">
-    <!-- Tu będzie wstrzykiwana lista samochodów -->
-    <div class="row" id="car-list"></div>
-</div>
-
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        let cars = [];
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
 
-        // Funkcja renderująca karty w #car-list
-        function renderCars(list) {
-            const container = document.getElementById("car-list");
-            container.innerHTML = "";
-            list.forEach(car => {
-                const card = `
-            <div class="col-sm-6 col-md-4 col-lg-4 mb-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="offer-img-wrap">
-                    <img class="object-fit-cover offer-img" src="${car.image}" alt="${car.brand}">
-                  </div>
-                  <h4 class="text-center card-title" style="font-family: Montserrat, sans-serif;font-weight: bold;">
-                    ${car.brand}
-                  </h4>
-                  <h6 class="text-muted card-subtitle mb-2" style="text-align: center;font-family: Montserrat, sans-serif;">
-                    ${car.model}
-                  </h6>
-                  <table class="table">
-                    <tbody>
-                      <tr><td class="cell-left">Silnik</td><td class="cell-right">${car.engineType}</td></tr>
-                      <tr><td class="cell-left">Skrzynia biegów</td><td class="cell-right">${car.transmission}</td></tr>
-                      <tr><td class="cell-left">Liczba miejsc</td><td class="cell-right">${car.seats}</td></tr>
-                      <tr><td class="cell-left">Nadwozie</td><td class="cell-right">${car.bodyType}</td></tr>
-                    </tbody>
-                  </table>
-                  <button class="btn btn-primary view-btn" type="button"
-                    style="font-family: Montserrat, sans-serif;font-weight: bold;background: var(--bs-gray-700);border-color: rgb(91,97,103);">
-                    Zobacz ofertę
-                  </button>
-                </div>
-              </div>
-            </div>`;
-                container.insertAdjacentHTML("beforeend", card);
-            });
+        if (!id) {
+            alert("Nie podano ID pojazdu.");
+            window.location.href = "offert.html";
+            return;
         }
 
-        // Pobierz wszystkie auta z API
-        fetch("http://localhost:8082/api/cars")
-            .then(res => res.json())
-            .then(data => {
-                cars = data;
-                renderCars(cars);
+        fetch(`http://localhost:8082/api/cars/${id}`)
+            .then(response => {
+                if (!response.ok) throw new Error("Nie znaleziono pojazdu");
+                return response.json();
             })
-            .catch(err => console.error("Błąd pobierania aut:", err));
-
-        // Obsługa filtrów
-        document.querySelectorAll(".filter-btn").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const filter = btn.dataset.filter;
-                if (filter === "ALL") {
-                    renderCars(cars);
-                } else {
-                    const filtered = cars.filter(c => c.bodyType === filter || c.engineType === filter);
-                    renderCars(filtered);
-                }
+            .then(car => {
+                document.getElementById("car-title").textContent = `${car.brand} ${car.model}`;
+                document.getElementById("car-subtitle").textContent = `Typ: ${car.bodyType}`;
+                document.getElementById("car-image").src = car.image;
+                document.getElementById("car-brand").textContent = car.brand;
+                document.getElementById("car-model").textContent = car.model;
+                document.getElementById("car-engine").textContent = car.engineType;
+                document.getElementById("car-transmission").textContent = car.transmission;
+                document.getElementById("car-seats").textContent = car.seats;
+                document.getElementById("car-body").textContent = car.bodyType;
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Wystąpił problem podczas ładowania szczegółów samochodu.");
+                window.location.href = "offert.html";
             });
-        });
-    });
-
-</script>
-<script>
-    // Aktualizacja przycisku w nawigacji na podstawie tokena
-    document.addEventListener("DOMContentLoaded", function() {
-        const authLink = document.getElementById("auth-link");
-        const token = localStorage.getItem("authToken");
-        if (token) {
-            authLink.textContent = "SIGN OUT";
-            authLink.href = "index.html";
-            // Dodaj email użytkownika obok przycisku, jeśli zapisany
-            const userEmail = localStorage.getItem("email");
-            if (userEmail) {
-                const emailSpan = document.createElement("span");
-                emailSpan.textContent = ` (${userEmail})`;
-                emailSpan.style.marginLeft = "8px";
-                emailSpan.style.fontWeight = "normal";
-                authLink.parentNode.appendChild(emailSpan);
-            }
-            authLink.addEventListener("click", function(e) {
-                e.preventDefault();
-                localStorage.removeItem("authToken");
-                localStorage.removeItem("email");
-                window.location.href = "index.html";
-            });
-        } else {
-            authLink.textContent = "SIGN IN";
-            authLink.href = "login.html";
-        }
     });
 </script>
 
-
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
-
 </html>
